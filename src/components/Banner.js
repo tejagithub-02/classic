@@ -53,7 +53,7 @@ const Banner = () => {
       <header className="header">
         <div className="logo-section">
           <img src="/images/logo.png" alt="classic kitchen" className="logo" />
-          <span className="brand-name">The Classic kitchen</span>
+          <span className="brand-name">The Classic Kitchen</span>
         </div>
 
         <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
