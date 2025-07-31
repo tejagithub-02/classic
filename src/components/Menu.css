@@ -1,0 +1,186 @@
+/* Menu.css */
+
+.menu-container {
+  background-color: #001f3f; /* solid navy background */
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 20px;
+}
+
+.menu-heading {
+  margin-bottom: 40px;
+}
+
+.menu-heading p {
+  font-size: 1.1rem;
+  color: #d90000;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  animation: fadeInText 1s ease-in-out;
+}
+
+.menu-heading h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+  animation: fadeInText 1.2s ease-in-out;
+}
+
+.menu-heading h2 span {
+  color: #d90000;
+}
+
+.menu-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  animation: fadeInText 1.4s ease-in-out;
+}
+
+.category-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #001f3f;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+  background-color: #d90000;
+  color: #fff;
+  border-color: #fff;
+  transform: scale(1.05);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: cardAppear 0.8s ease-in-out;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.menu-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 4px solid #d90000;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #001f3f;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .menu-heading h2 {
+    font-size: 2rem;
+  }
+
+  .category-button {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .menu-card img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-heading h2 {
+    font-size: 1.7rem;
+  }
+
+  .category-button {
+    font-size: 0.9rem;
+  }
+
+  .menu-card img {
+    height: 140px;
+  }
+}
+
+/* Big Screens: 3 cards per row + Bigger Cards */
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-card img {
+    height: 220px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+}

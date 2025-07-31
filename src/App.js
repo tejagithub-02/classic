@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
+import Preloader from './components/Preloader';
+
+
+import Banner from './components/Banner';
+import Dishes from './components/Dishes';
+import Services from './components/Services';
+import BookingForm from './components/BookingForm';
+import About from './components/About';
+import Video from './components/Video';
+import Menu from './components/Menu';
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <Preloader />
+      ) : (
+      <>
+        <Banner/>
+        <Dishes/>
+        <Services/>
+        <BookingForm/>
+        <About/>
+        <Video/>
+        <Menu/>
+       </>
+      )}
+    </>
   );
-}
+};
 
 export default App;

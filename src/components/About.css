@@ -1,0 +1,283 @@
+.about-catering {
+    position: relative;
+    min-height: 100vh;
+    padding: 72px 4vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.05); /* fallback while image loads */
+    box-sizing: border-box;
+    background-attachment: fixed;
+  }
+  
+  .light-overlay {
+    background: linear-gradient(
+      120deg, 
+      rgba(0,0,0,0.25) 0%, 
+      rgba(255,255,255,0.12) 100%
+    );
+    backdrop-filter: blur(1.2px);
+  }
+  
+  
+  .about-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgb(0 0 0 / 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    color: #406882;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    user-select: none;
+    opacity: 0;
+    animation: fadeSlideUp 1.2s cubic-bezier(.56,1.67,.6,.95) forwards;
+  }
+  
+  .headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #253c55;
+    line-height: 1.2;
+    opacity: 0;
+    animation: fadeSlideDown 1.4s cubic-bezier(.56,1.67,.6,.95) forwards;
+  }
+  
+  .about-main {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 1s ease 1.0s forwards;
+  }
+  
+  .about-image-gallery {
+    flex: 1 1 380px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-radius: 16px;
+  }
+  
+  .about-image-item {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+    background: #f4f7fb;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: imgFadeUp 0.86s cubic-bezier(.56,1.67,.6,.95) forwards, floatUpDown 6s ease-in-out infinite;
+    will-change: transform;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .about-image-item:hover,
+  .about-image-item:focus {
+    animation-play-state: paused;
+    transform: scale(1.15) rotate(4deg);
+    box-shadow: 0 18px 45px rgba(85,133,199,0.35);
+    outline: none;
+  }
+  
+  .about-text-features {
+    flex: 1 1 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 38px;
+    font-style: italic;
+    user-select: text;
+    opacity: 0;
+    animation: fadeInText 1.5s ease 0.45s forwards;
+  }
+  
+  .about-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 24px 40px;
+  }
+  
+  .about-features li {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2a3a4b;
+    background: #f3f8fc;
+    border-radius: 12px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.04);
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    animation: pulseShadow 10s ease-in-out infinite;
+    will-change: transform, box-shadow;
+  }
+  
+  .about-features li span {
+    font-size: 1.6rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .about-features li:hover {
+    background-color: #a7c7f9;
+    color: #023e8a;
+    box-shadow: 0 15px 40px rgba(2, 62, 138, 0.5);
+    transform: translateY(-7px) scale(1.1);
+  }
+  
+  .about-features li:hover span {
+    transform: scale(1.3) rotate(15deg);
+  }
+  
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes imgFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes fadeInText {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes floatUpDown {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-8px) scale(1.03); }
+  }
+  
+  @keyframes pulseShadow {
+    0%, 100% {
+      box-shadow: 0 3px 13px rgba(125,188,212,0.08);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 8px 20px rgba(125,188,212,0.3);
+      transform: scale(1.05);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 960px) {
+    .about-container {
+      padding: 30px 30px;
+    }
+  
+    .about-main {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .about-image-gallery {
+      max-width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .about-image-item {
+      height: 140px;
+    }
+  
+    .about-text-features {
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    .about-features {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-image-item {
+      height: 110px;
+    }
+  
+    .section-title {
+      font-size: 1.2rem;
+    }
+  
+    .headline {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Accessibility: disable animations for prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .about-image-item,
+    .about-features li,
+    .about-header .section-title,
+    .about-header .headline,
+    .about-description,
+    .about-main {
+      animation: none !important;
+      transform: none !important;
+    }
+  }
+  
