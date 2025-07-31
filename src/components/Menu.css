@@ -13,8 +13,8 @@
 }
 
 .menu-heading p {
-  font-size: 1.1rem;
-  color: #d90000;
+  font-size: 1.5rem;
+  color: white;
   margin-bottom: 8px;
   letter-spacing: 1px;
   animation: fadeInText 1s ease-in-out;
@@ -183,4 +183,8 @@
   .card-content p {
     font-size: 1rem;
   }
+}
+
+#menu {
+  scroll-margin-top: 100px; /* similar effect as scroll-padding-top */
 }

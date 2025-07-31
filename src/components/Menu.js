@@ -53,7 +53,7 @@ const Menu = () => {
   const filteredItems = menuItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="menu-container" style={backgroundStyle}>
+    <div className="menu-container" style={backgroundStyle} id='menu'>
       <div className="menu-heading">
         <p>— Explore Our Cuisine —</p>
         <h2><span>Authentic Flavors</span> For Every Plate</h2>

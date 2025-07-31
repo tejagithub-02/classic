@@ -56,13 +56,13 @@ const Banner = () => {
           <span className="brand-name">The Classic Kitchen</span>
         </div>
 
-        <nav className={`nav-menu ${isOpen ? 'open' : ''}`}>
-          <a href="/">Home</a>
-          <a href="#about">Menu</a>
-          <a href="#packages">Events</a>
-          <a href="#contact">About Us</a>
-          <a href="#login">Contact Us</a>
-        </nav>
+        <nav className={`nav-menu ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(false)}>
+        <a href="/">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#events">Events</a>
+        <a href="#contact">About Us</a>
+        <a href="#login">Contact Us</a>
+      </nav>
 
         <div className="menu-toggle" onClick={toggleMenu}>
           {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}

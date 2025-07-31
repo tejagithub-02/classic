@@ -10,6 +10,7 @@ import BookingForm from './components/BookingForm';
 import About from './components/About';
 import Video from './components/Video';
 import Menu from './components/Menu';
+import Events from './components/Events';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const App = () => {
         <About/>
         <Video/>
         <Menu/>
+        <Events/>
        </>
       )}
     </>
