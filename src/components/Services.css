@@ -26,24 +26,23 @@
   max-width: 1280px;
   margin: auto;
 }
-
 .section-subtitle {
-  color: #c70000; /* Deeper red for more contrast */
-  font-weight: 700;
-  font-size: 32px;
-  letter-spacing: 2.5px;
-  animation: fadeInDown 0.6s ease-in-out both;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Added shadow for visibility */
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 800;
+  text-shadow: 0 0 10px #ff1744, 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .section-title1 {
-  color: #ffffff; /* White for maximum contrast */
-  font-size: 35px;
-  font-weight: 700;
+  color: #ffffff; /* White color */
+  font-size: 40px;
+  font-weight: 800;
   margin-bottom: 60px;
   animation: fadeInUp 0.8s ease-in-out 0.2s both;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Bolder shadow for strong emphasis */
 }
+
+
 
 /* Grid Layout */
 .services-grid {

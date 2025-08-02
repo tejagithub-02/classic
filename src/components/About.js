@@ -20,7 +20,7 @@ const About = () => {
   ];
 
   return (
-    <section className="about-catering" style={sectionStyle}>
+    <section className="about-catering" style={sectionStyle} id='about'>
       <div className="light-overlay" />
 
       <div className="about-container">

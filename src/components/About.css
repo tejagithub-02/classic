@@ -280,4 +280,6 @@
       transform: none !important;
     }
   }
-  
+  #about {
+    scroll-margin-top: 110px; /* similar effect as scroll-padding-top */
+  }

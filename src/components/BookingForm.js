@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './BookingForm.css';
 
 const WHATSAPP_PHONE_NUMBER = '919035815260';
 
 const BookingForm = () => {
-  const countryRef = useRef();
+  const [isOtherCity, setIsOtherCity] = useState(false);
+  const [otherCity, setOtherCity] = useState('');
+
   const cityRef = useRef();
   const venueRef = useRef();
   const eventTypeRef = useRef();
@@ -18,13 +20,20 @@ const BookingForm = () => {
     return selected ? selected.value.charAt(0).toUpperCase() + selected.value.slice(1) : "Not specified";
   };
 
+  const handleCityChange = (e) => {
+    const selectedCity = e.target.value;
+    setIsOtherCity(selectedCity === 'Others');
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const cityValue = isOtherCity ? otherCity : cityRef.current.value;
+
     const message =
       `Booking Request:
-• Country: ${countryRef.current.value}
-• City: ${cityRef.current.value}
+
+• City: ${cityValue}
 • Venue/Place: ${venueRef.current.value}
 • Event Type: ${eventTypeRef.current.value}
 • No. of People: ${peopleRef.current.value}
@@ -35,7 +44,6 @@ const BookingForm = () => {
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${WHATSAPP_PHONE_NUMBER}?text=${encodedMessage}`;
-
     window.open(whatsappURL, '_blank');
   };
 
@@ -57,8 +65,32 @@ const BookingForm = () => {
           </h2>
 
           <form className="booking-form" onSubmit={handleSubmit}>
-            <input type="text" ref={countryRef} placeholder="Country" required />
-            <input type="text" ref={cityRef} placeholder="City" required />
+            <select ref={cityRef} onChange={handleCityChange} required>
+              <option value="">Select City</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Mysuru">Mysuru</option>
+              <option value="Mangaluru">Mangaluru</option>
+              <option value="Hubballi">Hubballi</option>
+              <option value="Dharwad">Dharwad</option>
+              <option value="Belagavi">Belagavi</option>
+              <option value="Shivamogga">Shivamogga</option>
+              <option value="Ballari">Ballari</option>
+              <option value="Tumakuru">Tumakuru</option>
+              <option value="Kalaburagi">Kalaburagi</option>
+              <option value="Udupi">Udupi</option>
+              <option value="Others">Others</option>
+            </select>
+
+            {isOtherCity && (
+              <input
+                type="text"
+                placeholder="Enter City"
+                value={otherCity}
+                onChange={(e) => setOtherCity(e.target.value)}
+                required
+              />
+            )}
+
             <input type="text" ref={venueRef} placeholder="Venue or Place" required />
             <input type="text" ref={eventTypeRef} placeholder="Event Type" required />
             <input type="number" min="1" ref={peopleRef} placeholder="No. of People" required />

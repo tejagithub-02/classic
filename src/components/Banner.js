@@ -60,8 +60,8 @@ const Banner = () => {
         <a href="/">Home</a>
         <a href="#menu">Menu</a>
         <a href="#events">Events</a>
-        <a href="#contact">About Us</a>
-        <a href="#login">Contact Us</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
       </nav>
 
         <div className="menu-toggle" onClick={toggleMenu}>
