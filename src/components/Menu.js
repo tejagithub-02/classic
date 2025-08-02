@@ -23,7 +23,7 @@ const menuItems = [
 
   { name: "Gulab Jamun", image: "/menu/Gulab Jamun.png", category: "Desserts" },
   { name: "Rasgulla", image: "/menu/Rasgulla.png", category: "Desserts" },
-  { name: "Kaju Katli", image: "/menu/Kaju Katli.png", category: "Desserts" },
+  { name: "Kaju Barfi", image: "/menu/Kaju Katli.png", category: "Desserts" },
   { name: "Jalebi", image: "/menu/Jalebi.png", category: "Desserts" },
   { name: "Kulfi", image: "/menu/Kulfi.png", category: "Desserts" },
   { name: "Apricot delight", image: "/menu/delite.png", category: "Desserts" },
@@ -56,7 +56,7 @@ const Menu = () => {
     <div className="menu-container" style={backgroundStyle} id='menu'>
       <div className="menu-heading">
         <p>— Explore Our Cuisine —</p>
-        <h2><span>Authentic Flavors</span> For Every Plate</h2>
+        <h2><span>"Authentic Flavors,</span> Served On Every Plate”</h2>
         <div className="menu-categories">
           {categories.map(category => (
             <button
