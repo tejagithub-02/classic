@@ -308,3 +308,56 @@
     transform: translateY(0);
   }
 }
+.scroll-down {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  cursor: pointer;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.mouse-shape {
+  width: 30px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-dot {
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  animation: dotScroll 1.5s infinite ease-in-out;
+}
+
+@keyframes dotScroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -4,12 +4,12 @@ import {FiMenu, FiX } from 'react-icons/fi';
 
 const banners = [
   {
-    image: '/images/banner.png',
+    image: '/images/banner2.png',
     tagline: 'Savor Every Occasion',
     headline: 'Delicious Catering Crafted\n For Memorable Moments',
   },
   {
-    image: '/images/banner1.png',
+    image: '/images/banner3.png',
     tagline: 'Flavors that Celebrate',
     headline: 'Exquisite Cuisine for\n Every Celebration',
   },
@@ -77,6 +77,20 @@ const Banner = () => {
         <p className="tagline animate-fade-in">{tagline}</p>
         <h1>{headline}</h1>
       </div>
+      
+
+      <div className="scroll-down" onClick={() => {
+        const nextSection = document.getElementById('offer'); 
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}>
+  <div className="mouse-shape">
+    <div className="scroll-dot"></div>
+  </div>
+</div>
+
+
     </section>
   );
 };

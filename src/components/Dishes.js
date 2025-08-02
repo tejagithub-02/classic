@@ -62,7 +62,7 @@ const Dishes = () => {
   }, []);
 
   return (
-    <section className="popular-dishes-section" style={backgroundStyle}>
+    <section className="popular-dishes-section" style={backgroundStyle} id='offer'>
       <div className="tomato-decoration">
         <img src="/images/b-g.png" alt="Tomato Decor" />
       </div>
