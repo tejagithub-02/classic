@@ -90,7 +90,6 @@ const BookingForm = () => {
                 required
               />
             )}
-
             <input type="text" ref={venueRef} placeholder="Venue or Place" required />
             <input type="text" ref={eventTypeRef} placeholder="Event Type" required />
             <input type="number" min="1" ref={peopleRef} placeholder="No. of People" required />

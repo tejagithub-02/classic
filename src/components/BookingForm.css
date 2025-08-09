@@ -67,7 +67,7 @@
   background-color: #fff;
   box-shadow: 0 0 5px rgba(217, 0, 0, 0.2);
 }
-
+ 
 .radio-group {
   grid-column: span 3;
   display: flex;
@@ -132,13 +132,8 @@
     grid-template-columns: 1fr;
   }
 
-  .radio-group {
-    grid-column: span 1;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
+ 
+  
   .booking-form button {
     grid-column: span 1;
     width: 100%;
@@ -150,6 +145,7 @@
     padding: 14px 15px;
   }
 }
+
 
 /* Extra small devices */
 @media screen and (max-width: 380px) {
@@ -164,5 +160,35 @@
   .booking-form button {
     font-size: 15px;
     padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .radio-group {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+    white-space: nowrap; /* prevent wrapping to new line */
+  }
+
+  .radio-group input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  /* Specifically target "Non-Vegetarian" */
+  .radio-group label:nth-of-type(2) {
+    margin-left: 0px;
+    gap: 8px;
+    white-space: nowrap; /* keep text on one line */
   }
 }
