@@ -27,7 +27,7 @@ const Footer = () => {
           <h4 className="footer-heading">Contact</h4>
           <address>
          
-            📍 No 180/2B, Ground Floor, 6th Cross, Lakshmi Layout, Garvebhavi Palya, Bangalore - 560068.
+        📍 No 180/2B, Ground Floor, 6th Cross, Lakshmi Layout, Garvebhavi Palya, Bangalore - 560068.
           </address>
           <a href="mailto:info@tckitchen.com" className="footer-contact-link">
             <FaEnvelope />info@tckitchen.com

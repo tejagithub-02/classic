@@ -6,10 +6,10 @@ const categories = ["Starters", "Main Course", "Desserts", "Drinks"];
 const menuItems = [
  
   { name: "Paneer Tikka", image: "/menu/bruschetta.png", category: "Starters" },
-  { name: "Veg Samosa", image: "/menu/spring-rolls.png", category: "Starters" },
-  { name: "Aloo Tikki", image: "/menu/grilled-chicken.png", category: "Starters" },
-  { name: "Masala Papad", image: "/menu/pasta-alfredo.png", category: "Starters" },
-  { name: "Apollo Fish Fry", image: "/menu/fish.png", category: "Starters" },
+  { name: "Spring roll", image: "/menu/spring-rolls.png", category: "Starters" },
+  { name: "Grill chicken", image: "/menu/grilled-chicken.png", category: "Starters" },
+  { name: "pasta", image: "/menu/pasta-alfredo.png", category: "Starters" },
+  { name: "Chilli chicken", image: "/menu/fish.png", category: "Starters" },
   { name: "Hara Bhara Kabab", image: "/menu/royal-platter.png", category: "Starters" },
 
   
