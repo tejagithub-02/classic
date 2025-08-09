@@ -15,7 +15,6 @@ const banners = [
   },
 ];
 
-
 const Banner = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

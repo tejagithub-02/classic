@@ -82,6 +82,7 @@
   font-style: normal;
   line-height: 1.7;
   margin-bottom: 12px;
+  margin-left: 0px;
   color: #ddd;
 }
 
@@ -209,6 +210,27 @@
   align-items: center;
   gap: 10px;
 }
+
+
+@media (min-width: 1025px) {
+  .footer-section address {
+    margin-left: -23px; 
+    display: block; 
+    
+  }
+}
+@media (min-width: 1025px) {
+  .footer-section .address-line-2 {
+    display: inline-block;
+    margin-left: 15px; /* Shift second line only */
+  }
+}
+@media (min-width: 1025px) {
+  .footer-section.contact-section {
+    margin-left: -15px;
+  }
+}
+
 
 /* Small screen styles only */
 @media (max-width: 576px) {

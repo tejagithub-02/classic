@@ -53,11 +53,14 @@
 }
 
 .brand-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 1.5rem; /* Bigger text */
+  font-weight: 700; /* Bolder weight */
+  color: #fff; /* White text */
   font-family: 'Playfair Display', serif;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow for contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px 12px; /* Space around text */
+  border-radius: 6px; /* Smooth edges */
 }
 
 
@@ -70,15 +73,24 @@
 
 .nav-menu a {
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #fff;
-  transition: color 0.3s ease;
+  font-weight: 800; /* Bolder text */
+  font-size: 1.2rem; /* Slightly larger */
+  color: #fff; /* White text */
+  letter-spacing: 0.5px; /* Better spacing */
+ 
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px 12px; /* Same padding style */
+  border-radius: 6px; /* Smooth edges */
+  transition: all 0.3s ease;
 }
 
 .nav-menu a:hover {
   color: red;
+  
+  transform: scale(1.05); /* Slight zoom */
 }
+
+
 
 /* === INQUIRY BOX === */
 .inquiry {
@@ -143,11 +155,15 @@
 .hero-text.left-align h1,
 .hero-text.right-align h1 {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  font-size: 2.2rem;
-  color: white;
+  font-weight: 700; /* Bolder for visibility */
+  font-size: 2.8rem; /* Larger heading */
+  color: white; /* Strong contrast */
   line-height: 1.4;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Stronger shadow */
+  
+  padding: 8px 16px; /* Adds space for better readability */
+  border-radius: 6px; /* Smooth edges */
+  display: inline-block; /* Prevent background stretching full width */
 }
 
 /* === TAGLINE (Larger, Bolder, More Visible) === */
